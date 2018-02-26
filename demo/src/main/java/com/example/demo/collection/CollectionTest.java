@@ -34,18 +34,23 @@ public class CollectionTest {
         }
     }
 //用Collections.sort(list);对集合进行标准排序
-//快捷键 iter 生成增强  itit  生成iterator 迭代 itar 生成array for代码块
+//快捷键 iter 生成增强  itit  生成iterator 迭代 itar 生成array for代码块 fori普通循环
     public static void test3(){
         ArrayList<String> list = new ArrayList<>();
         list.add("1");
         list.add("4");
         list.add("2");
         list.add("3");
-        Collections.sort(list);
+
+        //标准比较
+//        Collections.sort(list);
+        //可以自己写比较
+        Collections.sort(list, (a, b) -> a.compareTo(b));
         Iterator<String> iterator = list.iterator();
         while (iterator.hasNext()) {
             String s = iterator.next();
             System.out.printf(s);
         }
     }
+
 }
