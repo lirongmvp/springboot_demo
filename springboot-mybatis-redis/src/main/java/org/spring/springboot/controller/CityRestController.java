@@ -33,7 +33,7 @@ public class CityRestController {
         cityService.updateCity(city);
     }
 
-    @RequestMapping(value = "/api/city/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/api/city/delete/{id}", method = RequestMethod.GET)
     public void modifyCity(@PathVariable("id") Long id) {
         cityService.deleteCity(id);
     }

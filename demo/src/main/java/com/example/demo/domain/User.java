@@ -1,4 +1,4 @@
-package spring.boot.core.domain;
+package com.example.demo.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

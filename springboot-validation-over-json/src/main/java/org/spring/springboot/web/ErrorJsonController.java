@@ -20,7 +20,7 @@ public class ErrorJsonController {
 
     /**
      * 获取城市接口
-     *
+     *@RequestParam @RequestBody 都可以绑定参数
      * @param cityName
      * @return
      * @throws GlobalErrorInfoException

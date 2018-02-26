@@ -3,12 +3,11 @@ package spring.boot.core.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import spring.boot.core.domain.User;
 import spring.boot.core.service.UserService;
+
+import java.util.List;
 
 /**
  * 用户控制层
@@ -85,6 +84,12 @@ public class UserController {
 
         userService.delete(id);
         return "redirect:/users/";
+    }
+    @RequestMapping("/find")
+    @ResponseBody
+    public List<User> findUser(){
+        List<User> list = userService.findAll();
+        return list;
     }
 
 }

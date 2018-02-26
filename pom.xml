@@ -16,7 +16,8 @@
 		<module>springboot-properties</module>
 		<!-- Spring Boot 之配置注解使用 -->
 		<module>springboot-configuration</module>
-
+        <!-- 自己练习的 -->
+		<module>demo</module>
 		<!-- 基础 - Web 业务开发篇 -->
 		<!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
 		<module>springboot-restful</module>
